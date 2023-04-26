@@ -18,7 +18,7 @@ export const GLabel = styled((props) => <TLabel {...props} />)(() => ({
   color: '#02FF7B'
 }));
 
-export const LH5 = (props) => <Label {...{ ...props, variant: 'h5' }} />;
+export const LH5 = (props) => <Label {...{ ...props, variant: 'h5', fontSize: '18px' }} />;
 
 export const LH4 = (props) => <Label {...{ ...props, variant: 'h4', fontSize: '20px' }} />;
 

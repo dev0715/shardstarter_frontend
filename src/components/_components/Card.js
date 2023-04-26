@@ -1,5 +1,6 @@
 import React from 'react';
 import Box from '@mui/material/Box';
+import { LH5, GLabel } from './Label';
 
 const Card = (props) => {
   return (
@@ -10,10 +11,18 @@ const Card = (props) => {
         ...props.sx,
         backgroundImage: 'url("_img/cards/background.png")',
         backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover'
+        backgroundSize: 'cover',
+        display: 'flex',
+        alignItems: 'center'
       }}
     >
-      Card
+      <Box sx={{ marginLeft: '22px' }}>
+        <img src={props.img} alt={props.label} width={80} />
+      </Box>
+      <Box sx={{ marginLeft: '15px', display: 'flex', justifyContent: 'space-around', flexFlow: 'column' }}>
+        <LH5 text={props.label} />
+        <GLabel text={props.status} sx={{ fontSize: '30px !important' }} />
+      </Box>
     </Box>
   );
 };

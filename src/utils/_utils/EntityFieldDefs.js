@@ -7,7 +7,7 @@ export const privacyString = 'Privacy Policy | Terms & Conditions';
 
 export const twitter = {
   img: '_img/icon/twitter.png',
-  path: 'https://twitter.com'
+  path: 'https://twitter.com',
 };
 export const facebook = {
   img: '_img/icon/facebook.png',
@@ -29,20 +29,25 @@ export const linkedin = {
 export const Fantasy = {
   img: '_img/icon/fantasy.png',
   label: 'PolkaFantasy',
-}
+  status: '65.00x'
+};
 export const Solchicks = {
   img: '_img/icon/solchicks.png',
   label: 'Solchicks',
-}
+  status: '10.14x'
+};
 export const Bulkperks = {
   img: '_img/icon/bulkperks.png',
-  label: 'Bulkperks'
-}
+  label: 'Bulkperks',
+  status: 'Live'
+};
 export const Sidus = {
   img: '_img/icon/sidus.png',
   label: 'SIDUS',
-}
+  status: '10.14x'
+};
 export const NetVRK = {
   img: '_img/icon/netvrk.png',
-  label: 'NetVRK'
-}
+  label: 'NetVRK',
+  status: 'Upcoming'
+};
