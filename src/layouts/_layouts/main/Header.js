@@ -1,13 +1,5 @@
 import React from 'react';
-import { 
-  AppBar, 
-  Box,
-  CssBaseline,
-  Divider,
-  Drawer,
-  IconButton,
-  Toolbar
-} from '@mui/material';
+import { AppBar, Box, CssBaseline, Divider, Drawer, IconButton, Toolbar } from '@mui/material';
 import { Menu, Close } from '@mui/icons-material';
 import { PrimaryButton } from 'components/_components/Button';
 import { navItems } from 'utils/_utils/EntityFieldDefs';
@@ -60,8 +52,7 @@ const Header = (props) => {
           padding: '8px',
           width: '220px',
           height: '70px',
-          display: { xs: 'block', md: 'none' },
-          boxShadow: 'none'
+          display: { xs: 'block', md: 'none' }
         }}
       />
     </Box>
@@ -70,14 +61,14 @@ const Header = (props) => {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex', marginBottom: '150px' }}>
+    <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar
-        component="nav"
         sx={{
           '@media (max-width: 600px)': {
             padding: '43px 2%'
           },
+          position: 'unset',
           padding: '43px 8%',
           height: '150px',
           borderBottom: '1px solid #002B15',

@@ -7,26 +7,20 @@ export const Label = (props) => <Typography {...props}>{props.text}</Typography>
 
 export const LCaption = (props) => <Label {...{ ...props, variant: 'caption' }} />;
 
-export const LBody = (props) => <Label className={props.className ?? 'mandatory'} {...{ ...props, variant: 'body' }} />;
-
-export const BoldLabel = styled((props) => <LBody {...props} />)(() => ({
-  fontWeight: 500,
-  width: 250
-}));
-
-export const CLabel = styled((props) => <Label {...props} />)(() => ({
-  fontWeight: 300,
-  fontSize: 16
-}));
+export const LBody = (props) => <Label {...{ ...props, variant: 'body' }} />;
 
 export const TLabel = styled((props) => <Label {...props} />)(() => ({
-  fontWeight: 300,
-  fontSize: 26
+  fontWeight: 700,
+  fontSize: 40
+}));
+
+export const GLabel = styled((props) => <TLabel {...props} />)(() => ({
+  color: '#02FF7B'
 }));
 
 export const LH5 = (props) => <Label {...{ ...props, variant: 'h5' }} />;
 
-export const LH4 = (props) => <Label {...{ ...props, variant: 'h4' }} />;
+export const LH4 = (props) => <Label {...{ ...props, variant: 'h4', fontSize: '20px' }} />;
 
 export const H4Link = (props) => (
   <Link to={props.href}>
