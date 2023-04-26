@@ -71,7 +71,7 @@ export default function Router() {
         { path: '/calender', element: <Calendar /> },
         { path: '/phonecalendar', element: <PhoneCalendar /> },
 
-        { path: '/lock', element: <LockListPage /> },  // remove this
+        { path: '/lock', element: <LockListPage /> }, // remove this
         { path: '/token-lock-detail/:token/:owner', element: <TokenLockDetailPage /> },
         { path: '/liquidity-lock-detail/:token/:owner', element: <LiquidityLockDetailPage /> },
         { path: '/presales', element: <Presales /> },
@@ -80,7 +80,7 @@ export default function Router() {
         { path: '/admin-presales', element: <AdminPresales /> },
         { path: '/admin', element: <Admin /> },
 
-        { path: '/pages', element: <PageList /> },  // list of pages
+        { path: '/pages', element: <PageList /> } // list of pages
       ]
     },
 
@@ -107,7 +107,7 @@ export default function Router() {
 // Dashboard
 const Presales = Loadable(lazy(() => import('pages/Presales')));
 const Stakepad = Loadable(lazy(() => import('pages/Stakepad')));
-const HomePage = Loadable(lazy(() => import('pages/HomePage')));
+const HomePage = Loadable(lazy(() => import('pages/_pages/HomePage')));
 const IdoDeals = Loadable(lazy(() => import('pages/IdoDeals')));
 const Deals = Loadable(lazy(() => import('pages/Deals')));
 const InoDeals = Loadable(lazy(() => import('pages/InoDeals')));

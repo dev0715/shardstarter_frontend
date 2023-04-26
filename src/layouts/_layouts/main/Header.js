@@ -45,13 +45,8 @@ const Header = (props) => {
       <PrimaryButton
         label="Connect Wallet"
         sx={{
-          fontSize: '20px',
-          color: '#000',
-          backgroundColor: '#02FF7B',
           marginTop: '20px',
           padding: '8px',
-          width: '220px',
-          height: '70px',
           display: { xs: 'block', md: 'none' }
         }}
       />
@@ -123,12 +118,7 @@ const Header = (props) => {
             <PrimaryButton
               label="Connect Wallet"
               sx={{
-                fontSize: '20px',
-                color: '#000',
-                backgroundColor: '#02FF7B',
                 padding: '8px',
-                width: '220px',
-                height: '70px',
                 display: { xs: 'none', md: 'block' }
               }}
             />
