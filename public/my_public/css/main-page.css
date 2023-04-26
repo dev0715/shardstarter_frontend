@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Madani Arabic Light', sans-serif !important;
+  box-shadow: none !important;
 }
 
 a {
