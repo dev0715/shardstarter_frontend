@@ -25,3 +25,24 @@ export const linkedin = {
   img: '_img/icon/linkedin.png',
   path: 'https://linkedin.com'
 };
+
+export const Fantasy = {
+  img: '_img/icon/fantasy.png',
+  label: 'PolkaFantasy',
+}
+export const Solchicks = {
+  img: '_img/icon/solchicks.png',
+  label: 'Solchicks',
+}
+export const Bulkperks = {
+  img: '_img/icon/bulkperks.png',
+  label: 'Bulkperks'
+}
+export const Sidus = {
+  img: '_img/icon/sidus.png',
+  label: 'SIDUS',
+}
+export const NetVRK = {
+  img: '_img/icon/netvrk.png',
+  label: 'NetVRK'
+}
