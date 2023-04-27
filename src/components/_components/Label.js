@@ -20,7 +20,7 @@ export const GLabel = styled((props) => <TLabel {...props} />)(() => ({
 
 export const LH5 = (props) => <Label {...{ ...props, variant: 'h5', fontSize: '18px' }} />;
 
-export const LH4 = (props) => <Label {...{ ...props, variant: 'h4', fontSize: '20px' }} />;
+export const LH4 = (props) => <Label {...{ ...props, variant: 'h4', fontSize: '20px !important' }} />;
 
 export const H4Link = (props) => (
   <Link to={props.href}>

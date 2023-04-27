@@ -47,8 +47,10 @@ const Header = (props) => {
         sx={{
           marginTop: '20px',
           padding: '8px',
-          display: { xs: 'block', md: 'none' }
+          display: { xs: 'block', md: 'none' },
+          width: '220px'
         }}
+        hasFocus={true}
       />
     </Box>
   );
@@ -119,8 +121,10 @@ const Header = (props) => {
               label="Connect Wallet"
               sx={{
                 padding: '8px',
-                display: { xs: 'none', md: 'block' }
+                display: { xs: 'none', md: 'block' },
+                width: '220px'
               }}
+              hasFocus={true}
             />
           </Box>
         </Toolbar>

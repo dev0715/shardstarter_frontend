@@ -56,8 +56,10 @@ const Background = () => {
                     marginRight: '0px',
                     marginBottom: '20px'
                   },
-                  marginRight: '20px'
+                  marginRight: '20px',
+                  width: '220px'
                 }}
+                hasFocus={true}
                 img={'_img/icon/shardstarter.png'}
               />
               <SecondaryButton label="How to Invest" />

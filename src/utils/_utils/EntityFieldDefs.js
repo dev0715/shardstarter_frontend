@@ -3,11 +3,14 @@ export const navItems = ['projects', 'staking', 'dao', 'account', 'docs'];
 export const loremString =
   "Lorem Ipsum is simply dummy text of the printing and texttg typesetting industry. Lorem Ipsum has been the acceptts industry's standard dummy text.";
 
+export const loremString1 =
+  "Lorem Ipsum is simply dummy text of the of printing and typsetting industry. Lorem the Ipsum has been the industry's.";
+
 export const privacyString = 'Privacy Policy | Terms & Conditions';
 
 export const twitter = {
   img: '_img/icon/twitter.png',
-  path: 'https://twitter.com',
+  path: 'https://twitter.com'
 };
 export const facebook = {
   img: '_img/icon/facebook.png',
@@ -28,26 +31,97 @@ export const linkedin = {
 
 export const Fantasy = {
   img: '_img/icon/fantasy.png',
+  cardimg: '_img/projects/fantasy.png',
   label: 'PolkaFantasy',
-  status: '65.00x'
+  status: '65.00x',
+  value: 'Polka Fantasy',
+  active: true,
+  text: loremString1,
+  maxRise: '$ 200,000.00',
+  tokenAllocation: 'STU 1,000,000.00',
+  list: [
+    {
+      label: 'Private Round A',
+      value: '02D : 12H : 25M',
+      price: '$ 150,000.00',
+      percent: 79
+    }
+  ]
 };
 export const Solchicks = {
   img: '_img/icon/solchicks.png',
+  cardimg: '_img/projects/solchicks.png',
   label: 'Solchicks',
-  status: '10.14x'
+  status: '10.14x',
+  value: 'Solchicks',
+  active: true,
+  text: loremString1,
+  maxRise: '$ 200,000.00',
+  tokenAllocation: 'STU 1,000,000.00',
+  list: [
+    {
+      label: 'Private Round A',
+      value: '02D : 12H : 25M',
+      price: '$ 150,000.00',
+      percent: 79
+    }
+  ]
 };
 export const Bulkperks = {
   img: '_img/icon/bulkperks.png',
+  cardimg: '_img/projects/bulkperks.png',
   label: 'Bulkperks',
-  status: 'Live'
+  status: 'Live',
+  value: 'Bulkperks',
+  active: true,
+  text: loremString1,
+  maxRise: '$ 200,000.00',
+  tokenAllocation: 'STU 1,000,000.00',
+  list: [
+    {
+      label: 'Private Round A',
+      value: '02D : 12H : 25M',
+      price: '$ 150,000.00',
+      percent: 79
+    }
+  ]
 };
 export const Sidus = {
   img: '_img/icon/sidus.png',
+  cardimg: '_img/projects/sidus.png',
   label: 'SIDUS',
-  status: '10.14x'
+  status: '10.14x',
+  value: 'SIDUS',
+  active: true,
+  text: loremString1,
+  maxRise: '$ 200,000.00',
+  tokenAllocation: 'STU 1,000,000.00',
+  list: [
+    {
+      label: 'Private Round A',
+      value: '02D : 12H : 25M',
+      price: '$ 150,000.00',
+      percent: 79
+    }
+  ]
 };
 export const NetVRK = {
   img: '_img/icon/netvrk.png',
+  cardimg: '_img/projects/netvrk.png',
   label: 'NetVRK',
-  status: 'Upcoming'
+  status: 'Upcoming',
+  value: 'NetVRk',
+  active: true,
+  text: loremString1,
+  maxRise: '$ 200,000.00',
+  tokenAllocation: 'STU 1,000,000.00',
+  list: [
+    {
+      label: 'Private Round A',
+      value: '02D : 12H : 25M',
+      price: '$ 150,000.00',
+      percent: 79
+    }
+  ]
 };
+export const ProjectButtons = ['All', 'Upcoming', 'Active', 'Completed'];

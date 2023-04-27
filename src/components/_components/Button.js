@@ -4,8 +4,19 @@ import { Box, Button, IconButton } from '@mui/material';
 export const PrimaryButton = (props) => {
   return (
     <Button
+      onClick={props.onClick}
       variant="contained"
-      sx={{ ...props.sx, width: '220px', height: '70px', color: '#000', backgroundColor: '#02FF7B', fontSize: '20px' }}
+      sx={{
+        ':disabled': {
+          color: '#585858',
+          backgroundColor: '#171717'
+        },
+        ...props.sx,
+        color: props.color ? props.color : props.hasFocus ? '#000' : '#585858',
+        backgroundColor: props.hasFocus ? '#02FF7B' : '#171717',
+        fontSize: '20px',
+        height: '70px'
+      }}
     >
       {props.img && <img src={props.img} alt="icon" height={28} style={{ marginRight: '10px' }} />}
       {props.label}
@@ -19,7 +30,7 @@ export const SecondaryButton = (props) => {
       variant="outlined"
       sx={{
         ...props.sx,
-        width: '220px',
+        // width: '220px',
         height: '70px',
         fontSize: '20px',
         backgroundColor: '#171717',
