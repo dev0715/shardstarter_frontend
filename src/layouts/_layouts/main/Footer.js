@@ -90,7 +90,7 @@ const Footer = () => {
         }}
       >
         <Label
-          text={{ value: '© Copyrighted Shardstarter Network 2023 | All Rights Reserved' }}
+          text={{ value: '© Copyrighted Shardstarter Network 2023 | All Rights Reserved', weight: 100 }}
           sx={{ padding: '20px 0px', textAlign: 'center' }}
         />
       </Box>

@@ -14,4 +14,4 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   }
 }));
 
-export const LinearProgressBar = ({ value }) => <BorderLinearProgress variant="determinate" value={value} />;
+export const LinearProgressBar = ({ value, bgColor }) => <BorderLinearProgress variant="determinate" value={value} bgColor={bgColor} />;
