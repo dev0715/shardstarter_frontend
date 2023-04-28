@@ -156,12 +156,15 @@ export const VoteCard = ({ project }) => {
       sx={{
         backgroundColor: '#000',
         width: '100%',
-        height: '255px',
+        flexWrap: 'wrap',
+        rowGap: '20px',
         borderRadius: '20px',
         padding: '35px 60px 42px 60px',
         justifyContent: 'space-between',
+        alignItems: 'center',
         display: 'flex',
-        flexDirection: 'row'
+        flexDirection: 'row',
+        zIndex: 100
       }}
     >
       <Box>
@@ -176,20 +179,52 @@ export const VoteCard = ({ project }) => {
           <IconButtonGroup elements={project.social} size={50} />
         </Box>
       </Box>
-      <Box sx={{ width: '400px', display: 'flex', justifyContent: 'space-between', flexDirection: 'column' }}>
-        <Box sx={{ width: '160px' }}></Box>
-
-        <Box>
-          <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+      <Box
+        sx={{
+          width: '400px',
+          display: 'flex',
+          justifyContent: 'space-between',
+          flexDirection: 'column',
+          alignItems: 'center'
+        }}
+      >
+        <Box sx={{ width: '160px', display: 'flex', justifyContent: 'space-between' }}>
+          <Box>
+            <img
+              src={project.liked === 1 ? '_img/icon/liked.png' : '_img/icon/like.png'}
+              alt="like"
+              width={50}
+              style={{ cursor: 'pointer' }}
+            />
+            <Label
+              sx={{ marginTop: '20px' }}
+              text={{ value: 'Yes', size: 22, color: project.liked === 1 ? 'green' : 'white' }}
+            />
+          </Box>
+          <Box>
+            <img
+              src={project.liked === -1 ? '_img/icon/hated.png' : '_img/icon/hate.png'}
+              alt="like"
+              width={50}
+              style={{ cursor: 'pointer' }}
+            />
+            <Label
+              sx={{ marginTop: '20px' }}
+              text={{ value: 'No', size: 22, color: project.liked === -1 ? 'green' : 'white' }}
+            />
+          </Box>
+        </Box>
+        <Box sx={{ width: '100%' }}>
+          <Box sx={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
             <Label text={{ value: '70%', color: 'grey', size: 18, weight: 100 }} />
             <Label text={{ value: '30%', color: 'grey', size: 18, weight: 100 }} />
           </Box>
-          <LinearProgressBar value={70} />
+          <LinearProgressBar value={70} bgColor="grey" />
         </Box>
       </Box>
       <Box
         sx={{
-          height: '100%',
+          height: '190px',
           display: 'flex',
           justifyContent: 'space-between',
           flexDirection: 'column'
@@ -197,7 +232,7 @@ export const VoteCard = ({ project }) => {
       >
         {project.links.map((link, idx) => (
           <Box key={idx} sx={{ display: 'flex' }}>
-            <Label text={{ value: link.value }} sx={{ marginRight: '12px' }} />
+            <Label text={{ value: link.value, type: 'link', href: link.href }} sx={{ marginRight: '12px' }} />
             <Link to={link.href}>
               <LaunchIcon />
             </Link>

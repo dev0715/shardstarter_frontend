@@ -36,7 +36,7 @@ const Footer = () => {
             </Link>
           </Box>
           <Label
-            text={{ value: loremString, weight: 100 }}
+            text={{ value: loremString, weight: 100, color: '#D1D1D1' }}
             sx={{
               width: '612px',
               '@media (max-width: 1360px)': {
@@ -61,16 +61,17 @@ const Footer = () => {
             }}
             flexDirection="row"
             width="100%"
-            justifyContent="space-between"
+            justifyContent=" space-between"
           >
             <span>
               <Span
                 text={{
                   value: 'Join Our ',
-                  size: 40
+                  size: 40,
+                  weight: 700
                 }}
               />
-              <Span text={{ value: 'Community', size: 40, color: 'green' }} />
+              <Span text={{ value: 'Community', size: 40, color: 'green', weight: 700 }} />
             </span>
           </Box>
           <IconButtonGroup

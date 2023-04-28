@@ -9,7 +9,7 @@ import { Label } from 'components/_components/Label';
 const Logo = () => (
   <Box minWidth={318} height={64}>
     <Link to="/home">
-      <img src="_img/logo.png" alt="Logo" height="100%" />
+      <img src="_img/logo.png" alt="Logo" height="64px" />
     </Link>
   </Box>
 );
