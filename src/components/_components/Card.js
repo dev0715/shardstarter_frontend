@@ -1,9 +1,11 @@
 import React from 'react';
-import Box from '@mui/material/Box';
+import { Box } from '@mui/material';
 import { Label } from './Label';
 import { LinearProgressBar } from './ProgressBar';
 import { SecondaryButton, IconButtonGroup } from './Button';
 import { facebook, twitter, instagram, reddit } from 'utils/_utils/EntityFieldDefs';
+import LaunchIcon from '@mui/icons-material/Launch';
+import { Link } from 'react-router-dom';
 
 const Card = (props) => {
   return (
@@ -143,6 +145,64 @@ export const ProjectCard = ({ project }) => {
           <SecondaryButton label="Private Deal" sx={{ width: '190px' }} />
           <IconButtonGroup size="40px" elements={[twitter, facebook, instagram, reddit]} />
         </Box>
+      </Box>
+    </Box>
+  );
+};
+
+export const VoteCard = ({ project }) => {
+  return (
+    <Box
+      sx={{
+        backgroundColor: '#000',
+        width: '100%',
+        height: '255px',
+        borderRadius: '20px',
+        padding: '35px 60px 42px 60px',
+        justifyContent: 'space-between',
+        display: 'flex',
+        flexDirection: 'row'
+      }}
+    >
+      <Box>
+        <Box sx={{ display: 'flex' }}>
+          <img src={project.imgUrl} alt="imgUrl" width={100} />
+          <Box sx={{ display: 'flex', flexDirection: 'column', marginLeft: '30px' }}>
+            <Label text={{ value: project.value, size: 30 }} />
+            <RoundedCard bgColor="#171717" color="#02FF7B" label={project.label} width={119} height={43} />
+          </Box>
+        </Box>
+        <Box sx={{ marginTop: '28px' }}>
+          <IconButtonGroup elements={project.social} size={50} />
+        </Box>
+      </Box>
+      <Box sx={{ width: '400px', display: 'flex', justifyContent: 'space-between', flexDirection: 'column' }}>
+        <Box sx={{ width: '160px' }}></Box>
+
+        <Box>
+          <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+            <Label text={{ value: '70%', color: 'grey', size: 18, weight: 100 }} />
+            <Label text={{ value: '30%', color: 'grey', size: 18, weight: 100 }} />
+          </Box>
+          <LinearProgressBar value={70} />
+        </Box>
+      </Box>
+      <Box
+        sx={{
+          height: '100%',
+          display: 'flex',
+          justifyContent: 'space-between',
+          flexDirection: 'column'
+        }}
+      >
+        {project.links.map((link, idx) => (
+          <Box key={idx} sx={{ display: 'flex' }}>
+            <Label text={{ value: link.value }} sx={{ marginRight: '12px' }} />
+            <Link to={link.href}>
+              <LaunchIcon />
+            </Link>
+          </Box>
+        ))}
       </Box>
     </Box>
   );

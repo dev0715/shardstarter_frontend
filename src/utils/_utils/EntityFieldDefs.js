@@ -36,6 +36,10 @@ export const telegram = {
   img: '_img/icon/telegram.png',
   path: 'https://telegram.com'
 };
+export const medium = {
+  img: '_img/icon/medium.png',
+  path: 'https://medium.com'
+};
 export const Fantasy = {
   img: '_img/icon/fantasy.png',
   cardimg: '_img/projects/fantasy.png',
@@ -134,6 +138,92 @@ export const NetVRK = {
 export const ProjectButtons = ['All', 'Upcoming', 'Active', 'Completed'];
 export const VoteButtons = ['All', 'Open', 'Completed'];
 export const VoteProjects = [
-  
-]
-
+  {
+    imgUrl: '_img/icon/solchicks_1.png',
+    value: 'Galaxy Wars',
+    label: '$GLXW',
+    social: [chain, twitter, medium, telegram, reddit],
+    liked: 0,
+    percent: 70,
+    links: [
+      {
+        value: 'Whitepapers',
+        href: '/'
+      },
+      {
+        value: 'Pitchdeck',
+        href: '/'
+      },
+      {
+        value: 'Audit Report',
+        href: '/'
+      }
+    ]
+  },
+  {
+    imgUrl: '_img/icon/bulkperks_1.png',
+    value: 'Galaxy Wars',
+    label: '$GLXW',
+    social: [chain, twitter, medium, telegram, reddit],
+    liked: 1,
+    percent: 70,
+    links: [
+      {
+        value: 'Whitepapers',
+        href: '/'
+      },
+      {
+        value: 'Pitchdeck',
+        href: '/'
+      },
+      {
+        value: 'Audit Report',
+        href: '/'
+      }
+    ]
+  },
+  {
+    imgUrl: '_img/icon/netvrk_1.png',
+    value: 'Galaxy Wars',
+    label: '$GLXW',
+    social: [chain, twitter, medium, telegram, reddit],
+    liked: -1,
+    percent: 70,
+    links: [
+      {
+        value: 'Whitepapers',
+        href: '/'
+      },
+      {
+        value: 'Pitchdeck',
+        href: '/'
+      },
+      {
+        value: 'Audit Report',
+        href: '/'
+      }
+    ]
+  },
+  {
+    imgUrl: '_img/icon/sidus_1.png',
+    value: 'Galaxy Wars',
+    label: '$GLXW',
+    social: [chain, twitter, medium, telegram, reddit],
+    liked: 0,
+    percent: 70,
+    links: [
+      {
+        value: 'Whitepapers',
+        href: '/'
+      },
+      {
+        value: 'Pitchdeck',
+        href: '/'
+      },
+      {
+        value: 'Audit Report',
+        href: '/'
+      }
+    ]
+  }
+];

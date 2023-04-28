@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import { Label } from 'components/_components/Label';
-import { SearchInput } from 'components/_components/Input';
 import { PrimaryButton } from 'components/_components/Button';
-import { VoteButtons, Fantasy, Solchicks, NetVRK, Bulkperks, Sidus } from 'utils/_utils/EntityFieldDefs';
+import { VoteButtons, VoteProjects } from 'utils/_utils/EntityFieldDefs';
+import { VoteCard } from 'components/_components/Card';
 
 const Projects = () => {
   const [activeId, setActiveId] = useState(0);
@@ -69,8 +69,12 @@ const Projects = () => {
               />
             ))}
           </Stack>
+          <Box sx={{ marginTop: '60px', display: 'flex', flexDirection: 'column', rowGap: '20px' }}>
+            {VoteProjects.map((project, idx) => (
+              <VoteCard key={idx} project={project} />
+            ))}
+          </Box>
         </Box>
-               
       </Box>
     </Box>
   );
