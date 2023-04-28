@@ -1,29 +1,73 @@
 import React from 'react';
 import Typography from '@mui/material/Typography';
-import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
-export const Label = (props) => <Typography {...props}>{props.text}</Typography>;
+export const Label = (props) => {
+  const { value, size = 20, color = 'white', type = 'text', href, weight = 700, underlined = false } = props.text;
 
-export const LCaption = (props) => <Label {...{ ...props, variant: 'caption' }} />;
+  const textColor =
+    color === 'grey'
+      ? '#A7A7A7'
+      : color === 'green'
+      ? '#02FF7B'
+      : color === 'black'
+      ? '#4B4B4B'
+      : color === 'white'
+      ? '#fff'
+      : color;
 
-export const LBody = (props) => <Label {...{ ...props, variant: 'body' }} />;
+  if (type === 'text') {
+    return <Typography sx={{ ...props.sx, fontSize: size, fontWeight: weight, color: textColor }}>{value}</Typography>;
+  }
+  if (type === 'link') {
+    return (
+      <Link to={href}>
+        <Typography
+          sx={{
+            ...props.sx,
+            fontSize: size,
+            fontWeight: weight,
+            color: textColor,
+            textDecoration: `${underlined ? 'underline' : 'none'}`
+          }}
+        >
+          {value}
+        </Typography>
+      </Link>
+    );
+  }
+};
 
-export const TLabel = styled((props) => <Label {...props} />)(() => ({
-  fontWeight: 700,
-  fontSize: 40
-}));
+export const Span = (props) => {
+  const { value, size = 20, color = 'white', type = 'text', href, weight = 300, underlined = false } = props.text;
 
-export const GLabel = styled((props) => <TLabel {...props} />)(() => ({
-  color: '#02FF7B'
-}));
+  const textColor =
+    color === 'grey' ? '#A7A7A7' : color === 'green' ? '#02FF7B' : color === 'black' ? '#4B4B4B' : '#fff';
 
-export const LH5 = (props) => <Label {...{ ...props, variant: 'h5', fontSize: '18px' }} />;
-
-export const LH4 = (props) => <Label {...{ ...props, variant: 'h4', fontSize: '20px !important' }} />;
-
-export const H4Link = (props) => (
-  <Link to={props.href}>
-    <LH5 text={props.href} {...props} />
-  </Link>
-);
+  if (type === 'text') {
+    return (
+      <span style={{ ...props.sx, fontSize: size, fontWeight: weight, color: textColor }}>
+        {value}
+        {props.children}
+      </span>
+    );
+  }
+  if (type === 'link') {
+    return (
+      <Link to={href}>
+        <span
+          style={{
+            ...props.sx,
+            fontSize: size,
+            fontWeight: weight,
+            color: textColor,
+            textDecoration: `${underlined ? 'underline' : 'none'}`
+          }}
+        >
+          {value}
+          {props.children}
+        </span>
+      </Link>
+    );
+  }
+};

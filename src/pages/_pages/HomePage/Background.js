@@ -1,7 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import { PrimaryButton, SecondaryButton } from 'components/_components/Button';
-import { TLabel, GLabel } from 'components/_components/Label';
+import { Label } from 'components/_components/Label';
 
 const Background = () => {
   return (
@@ -37,8 +37,8 @@ const Background = () => {
         >
           <Box sx={{ paddingTop: '75px' }}>
             <Box>
-              <TLabel text="Start Investing With" sx={{ fontSize: '3.75rem !important' }} />
-              <GLabel text="Shardstarter" sx={{ fontSize: '3.75rem !important' }} />
+              <Label text={{ value: 'Start Investing With', size: 60 }} />
+              <Label text={{ value: 'Shardstarter', size: 60 }} />
             </Box>
             <Box
               sx={{
@@ -62,7 +62,7 @@ const Background = () => {
                 hasFocus={true}
                 img={'_img/icon/shardstarter.png'}
               />
-              <SecondaryButton label="How to Invest" />
+              <SecondaryButton label="How to Invest" sx={{ width: '220px' }} />
             </Box>
           </Box>
           <Box>

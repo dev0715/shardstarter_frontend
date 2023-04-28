@@ -45,7 +45,7 @@ export default function Invest() {
               className="text-light text-center position-absolute start-50 translate-middle-x"
               style={{ top: '13px', fontFamily: { font_Family } }}
             >
-              How To Invest
+              How to Invest
             </h2>
           </Box>
           <MHidden width="mdDown">

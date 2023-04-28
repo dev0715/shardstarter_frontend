@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import { TLabel } from 'components/_components/Label';
+import { Label } from 'components/_components/Label';
 import { SearchInput } from 'components/_components/Input';
 import { PrimaryButton } from 'components/_components/Button';
 import { ProjectCard } from 'components/_components/Card';
@@ -29,12 +29,12 @@ const Projects = () => {
     >
       <img
         src="_img/projects/dot.png"
-        alg="dot"
+        alt="dot"
         style={{ position: 'absolute', top: '35px', left: '35px', width: '67px' }}
       />
       <img
         src="_img/projects/dot2.png"
-        alg="dot"
+        alt="dot"
         style={{
           position: 'absolute',
           bottom: '927px',
@@ -45,7 +45,7 @@ const Projects = () => {
       />
       <img
         src="_img/projects/dot3.png"
-        alg="dot"
+        alt="dot"
         style={{
           position: 'absolute',
           bottom: '882px',
@@ -57,7 +57,7 @@ const Projects = () => {
       />
       <img
         src="_img/projects/dot4.png"
-        alg="dot"
+        alt="dot"
         style={{ position: 'absolute', bottom: '40px', right: '100px', width: '89px' }}
       />
       <Box>
@@ -69,8 +69,11 @@ const Projects = () => {
             }
           }}
         >
-          <TLabel
-            text="Projects"
+          <Label
+            text={{
+              value: 'Projects',
+              size: 40
+            }}
             sx={{
               '@media (max-width: 800px)': {
                 marginRight: '0px',

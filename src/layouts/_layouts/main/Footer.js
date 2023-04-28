@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box } from '@mui/material';
-import { LH5, TLabel, GLabel, LH4 } from 'components/_components/Label';
+import { Label, Span } from 'components/_components/Label';
 import { IconButtonGroup } from 'components/_components/Button';
 import {
   loremString,
@@ -11,6 +11,7 @@ import {
   linkedin,
   reddit
 } from 'utils/_utils/EntityFieldDefs';
+import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <Box>
@@ -30,12 +31,13 @@ const Footer = () => {
       >
         <Box>
           <Box height={64} sx={{ marginBottom: '60px' }}>
-            <img src="_img/footer.png" alt="Footer" height="100%" />
+            <Link to="/home">
+              <img src="_img/footer.png" alt="Footer" height="100%" />
+            </Link>
           </Box>
-          <LH5
-            text={loremString}
+          <Label
+            text={{ value: loremString, weight: 100 }}
             sx={{
-              fontWeight: 100,
               width: '612px',
               '@media (max-width: 1360px)': {
                 width: '400px',
@@ -58,19 +60,25 @@ const Footer = () => {
               }
             }}
             flexDirection="row"
-            maxWidth={400}
             width="100%"
             justifyContent="space-between"
           >
-            <TLabel text="Join Our " sx={{ marginRight: '8px' }} />
-            <GLabel text="Community" />
+            <span>
+              <Span
+                text={{
+                  value: 'Join Our ',
+                  size: 40
+                }}
+              />
+              <Span text={{ value: 'Community', size: 40, color: 'green' }} />
+            </span>
           </Box>
           <IconButtonGroup
             sx={{ marginTop: '30px' }}
             size="50px"
             elements={[twitter, facebook, instagram, reddit, linkedin]}
           />
-          <LH5 text={privacyString} sx={{ fontWeight: 100, marginTop: '40px' }} />
+          <Label text={{ value: privacyString, weight: 100 }} sx={{ marginTop: '40px' }} />
         </Box>
       </Box>
       <Box
@@ -81,8 +89,8 @@ const Footer = () => {
           justifyContent: 'center'
         }}
       >
-        <LH4
-          text="© Copyrighted Shardstarter Network 2023 | All Rights Reserved"
+        <Label
+          text={{ value: '© Copyrighted Shardstarter Network 2023 | All Rights Reserved' }}
           sx={{ padding: '20px 0px', textAlign: 'center' }}
         />
       </Box>

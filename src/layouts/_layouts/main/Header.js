@@ -1,13 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { AppBar, Box, CssBaseline, Divider, Drawer, IconButton, Toolbar } from '@mui/material';
 import { Menu, Close } from '@mui/icons-material';
 import { PrimaryButton } from 'components/_components/Button';
 import { navItems } from 'utils/_utils/EntityFieldDefs';
-import { H4Link } from 'components/_components/Label';
+import { Label } from 'components/_components/Label';
 
 const Logo = () => (
   <Box minWidth={318} height={64}>
-    <img src="_img/logo.png" alt="Logo" height="100%" />
+    <Link to="/home">
+      <img src="_img/logo.png" alt="Logo" height="100%" />
+    </Link>
   </Box>
 );
 
@@ -29,13 +32,17 @@ const Header = (props) => {
       <Box onClick={handleDrawerToggle}>
         {navItems.map((item, idx) => (
           <Box key={idx}>
-            <H4Link
-              href={item}
-              style={{
-                fontSize: '18px',
-                fontWeight: 100,
+            <Label
+              sx={{
                 textTransform: 'uppercase',
                 marginTop: '15px'
+              }}
+              text={{
+                type: 'link',
+                value: item.toUpperCase(),
+                href: item,
+                size: 18,
+                weight: 100
               }}
             />
             <Divider />
@@ -105,14 +112,17 @@ const Header = (props) => {
               }}
             >
               {navItems.map((item, idx) => (
-                <H4Link
+                <Label
                   key={idx}
-                  href={item}
-                  style={{
-                    fontSize: '18px',
-                    fontWeight: 100,
-                    textTransform: 'uppercase',
+                  sx={{
                     marginRight: '60px'
+                  }}
+                  text={{
+                    type: 'link',
+                    value: item.toUpperCase(),
+                    href: item,
+                    size: 18,
+                    weight: 100
                   }}
                 />
               ))}

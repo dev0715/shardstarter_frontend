@@ -28,6 +28,14 @@ export const linkedin = {
   img: '_img/icon/linkedin.png',
   path: 'https://linkedin.com'
 };
+export const chain = {
+  img: '_img/icon/chain.png',
+  path: 'https://chain.com'
+};
+export const telegram = {
+  img: '_img/icon/telegram.png',
+  path: 'https://telegram.com'
+};
 
 export const Fantasy = {
   img: '_img/icon/fantasy.png',
