@@ -25,7 +25,7 @@ const Background = () => {
       >
         <Box
           sx={{
-            padding: '75px 70px 0px 70px',
+            padding: '88px 120px 78px 76px',
             display: 'flex',
             justifyContent: 'space-between',
             flexDirection: 'row',
@@ -35,9 +35,9 @@ const Background = () => {
             }
           }}
         >
-          <Box sx={{ paddingTop: '75px' }}>
+          <Box sx={{ paddingTop: '62px' }}>
             <Box>
-              <Label text={{ value: 'Start Investing With', size: 60 }} />
+              <Label text={{ value: 'Vote For Projects', size: 60 }} />
               <Label text={{ value: 'Shardstarter', color: 'green', size: 60 }} />
             </Box>
             <Box
@@ -50,7 +50,7 @@ const Background = () => {
               }}
             >
               <PrimaryButton
-                label="Buy SHMX"
+                label="How it works"
                 sx={{
                   '@media (max-width: 800px)': {
                     marginRight: '0px',
@@ -60,9 +60,7 @@ const Background = () => {
                   width: '220px'
                 }}
                 hasFocus={true}
-                img={'_img/icon/shardstarter.png'}
               />
-              <SecondaryButton label="How to Invest" sx={{ width: '220px' }} />
             </Box>
           </Box>
           <Box>
@@ -72,7 +70,7 @@ const Background = () => {
                   'transparent radial-gradient(closest-side at 142% 150%, #70C5A3 0%, #02FF7B 49%, #008540 100%) 0% 0% no-repeat padding-box'
               }}
             ></Box>
-            <img src="_img/coin.png" alt="coin" height={575} />
+            <img src="_img/vote.png" alt="coin" height={535} width={585} />
           </Box>
         </Box>
       </Box>
