@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import { ProjectCard } from 'utils/_utils/Projects';
 import { Label } from 'components/_components/Label';
@@ -25,6 +25,8 @@ const renderDetails = () => (
 );
 
 const Projectcard = () => {
+  const [walletConnected, setWalletConnected] = useState(false);
+
   return (
     <Box
       sx={{
@@ -67,23 +69,31 @@ const Projectcard = () => {
         <Box
           sx={{
             marginTop: '40px',
-            height: '100px',
             backgroundColor: '#171717',
             display: 'flex',
+            flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-            borderRadius: '8px'
+            borderRadius: '8px',
+            padding: '15px 0px'
           }}
         >
+          {walletConnected && (
+            <Label
+              sx={{ marginBottom: '15px' }}
+              text={{ value: 'This IDO requires KYC verification.', size: 18, weight: 100 }}
+            />
+          )}
           <PrimaryButton
-            label="Connect Wallet"
+            label={walletConnected ? 'Verify KYC' : 'Connect Wallet'}
             sx={{
               padding: '8px',
-              display: { xs: 'none', md: 'block' },
               width: '220px'
             }}
             hasFocus={true}
+            onClick={() => setWalletConnected(!walletConnected)}
           />
+          {console.log(walletConnected)}
         </Box>
         <Label
           sx={{ marginTop: '8px', textAlign: 'right' }}
