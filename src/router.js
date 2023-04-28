@@ -50,7 +50,8 @@ export default function Router() {
         { path: '/home', element: <HomePage /> },
         { path: '/projects', element: <ProjectPage /> },
         { path: '/staking', element: <StakingPage /> },
-        { path: '/dao', element: <DaoPage /> }
+        { path: '/dao', element: <DaoPage /> },
+        { path: '/account', element: <AccountPage /> }
         
         // { path: '/deals', element: <Deals /> },
         // { path: '/idodeals', element: <IdoDeals /> },
@@ -113,6 +114,7 @@ const NotFound = Loadable(lazy(() => import('pages/Page404')));
 const ProjectPage = Loadable(lazy(() => import('pages/_pages/ProjectPage')));
 const StakingPage = Loadable(lazy(() => import('pages/_pages/StakingPage')));
 const DaoPage = Loadable(lazy(() => import('pages/_pages/DaoPage')));
+const AccountPage = Loadable(lazy(() => import('pages/_pages/AccountPage')));
 // const Presales = Loadable(lazy(() => import('pages/Presales')));
 // const Stakepad = Loadable(lazy(() => import('pages/Stakepad')));
 // const IdoDeals = Loadable(lazy(() => import('pages/IdoDeals')));
