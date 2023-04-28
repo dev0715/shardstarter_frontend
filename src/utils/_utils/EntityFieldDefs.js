@@ -36,7 +36,6 @@ export const telegram = {
   img: '_img/icon/telegram.png',
   path: 'https://telegram.com'
 };
-
 export const Fantasy = {
   img: '_img/icon/fantasy.png',
   cardimg: '_img/projects/fantasy.png',
@@ -133,3 +132,8 @@ export const NetVRK = {
   ]
 };
 export const ProjectButtons = ['All', 'Upcoming', 'Active', 'Completed'];
+export const VoteButtons = ['All', 'Open', 'Completed'];
+export const VoteProjects = [
+  
+]
+
