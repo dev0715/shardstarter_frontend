@@ -1,6 +1,6 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import { Label, LH5, LH4, GLabel } from './Label';
+import { Label } from './Label';
 import { LinearProgressBar } from './ProgressBar';
 import { SecondaryButton, IconButtonGroup } from './Button';
 import { facebook, twitter, instagram, reddit } from 'utils/_utils/EntityFieldDefs';
@@ -23,8 +23,8 @@ const Card = (props) => {
         <img src={props.img} alt={props.label} width={80} />
       </Box>
       <Box sx={{ marginLeft: '15px', display: 'flex', justifyContent: 'space-around', flexFlow: 'column' }}>
-        <LH5 text={props.label} />
-        <GLabel text={props.status} sx={{ fontSize: '30px !important' }} />
+        <Label text={{ value: props.label, size: 18 }} />
+        <Label text={{ value: props.status, size: 30, color: 'gree' }} />
       </Box>
     </Box>
   );
@@ -45,16 +45,37 @@ export const CardBox = (props) => {
       }}
     >
       <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
-        <LH4 text={label} />
-        <LH4 text={value} />
+        <Label text={{ value: label }} />
+        <Label text={{ value: value }} />
       </Box>
       <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginTop: '22px' }}>
-        <Label text={price} sx={{ fontSize: '16px', color: '#A7A7A7' }} />
-        <Label text={`${percent}%`} sx={{ fontSize: '16px', color: '#A7A7A7' }} />
+        <Label text={{ value: price, size: 16, color: 'grey' }} />
+        <Label text={{ value: `${percent}%`, size: 16, color: 'grey' }} />
       </Box>
       <Box>
         <LinearProgressBar value={percent} />
       </Box>
+    </Box>
+  );
+};
+
+export const RoundedCard = (props) => {
+  const { img, bgColor, label, width, height, color, size } = props;
+  return (
+    <Box
+      sx={{
+        display: 'flex',
+        alignItems: 'center',
+        borderRadius: '22px',
+        width: width,
+        height: height,
+        backgroundColor: bgColor,
+        marginTop: '8px',
+        justifyContent: 'center'
+      }}
+    >
+      {img && <img src={img} width={11} alt="Green Dot" style={{ marginRight: '10px' }} />}
+      <Label text={{ value: label, weight: 100, color, size }} />
     </Box>
   );
 };
@@ -75,27 +96,21 @@ export const ProjectCard = ({ project }) => {
         <Box display="flex" flexDirection="row">
           <img src={project.cardimg} alt={project.label} width={100} />
           <Box sx={{ paddingLeft: '20px' }}>
-            <Label text={project.value} sx={{ fontSize: '30px', fontWeight: 600 }} />
-            <Box
-              sx={{
-                display: 'flex',
-                alignItems: 'center',
-                borderRadius: '22px',
-                width: '122px',
-                height: '43px',
-                backgroundColor: '#171717',
-                marginTop: '8px'
-              }}
-            >
-              <img src="_img/projects/greendot.png" width={11} alt="Green Dot" style={{ marginLeft: '20px' }} />
-              <LH4 text="Active" sx={{ fontWeight: 100, marginLeft: '10px', color: '#02FF7B' }} />
-            </Box>
+            <Label text={{ value: project.value, size: 30 }} />
+            <RoundedCard
+              img="_img/projects/greendot.png"
+              bgColor="#171717"
+              label="Active"
+              width={122}
+              height={43}
+              color="green"
+            />
           </Box>
         </Box>
-        <LH4 text={project.text} sx={{ marginTop: '25px', fontWeight: 100, color: '#A7A7A7' }} />
+        <Label text={{ value: project.text, color: 'grey', weight: 100 }} sx={{ marginTop: '25px' }} />
         <Box sx={{ marginTop: '30px', display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
-          <Label text="Max Rise" sx={{ fontSize: '22px', color: '#4B4B4B', fontWeight: 700 }} />
-          <Label text={project.maxRise} sx={{ fontSize: '22px', fontWeight: 700 }} />
+          <Label text={{ value: 'Max Rise', size: 22, color: 'black' }} />
+          <Label text={{ value: project.maxRise, size: 22 }} />
         </Box>
         <Box
           sx={{
@@ -106,8 +121,8 @@ export const ProjectCard = ({ project }) => {
             justifyContent: 'space-between'
           }}
         >
-          <Label text="Token Allocation" sx={{ fontSize: '22px', color: '#4B4B4B', fontWeight: 700 }} />
-          <Label text={project.tokenAllocation} sx={{ fontSize: '22px', fontWeight: 700 }} />
+          <Label text={{ value: 'Token Allocation', size: 22, color: 'black' }} />
+          <Label text={{ value: project.tokenAllocation, size: 22 }} />
         </Box>
         {project.list.map((item, idx) => (
           <CardBox key={idx} item={item} />

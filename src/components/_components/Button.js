@@ -31,6 +31,7 @@ export const SecondaryButton = (props) => {
       sx={{
         ...props.sx,
         // width: '220px',
+        textTransform: 'initial',
         height: '70px',
         fontSize: '20px',
         backgroundColor: '#171717',
