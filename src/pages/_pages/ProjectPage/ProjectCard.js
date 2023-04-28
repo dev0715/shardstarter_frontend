@@ -120,7 +120,7 @@ const Projectcard = () => {
           <Label text={{ value: `${ProjectCard.progress.currProg}%`, size: 18, color: 'green', weight: 100 }} />
         </Box>
         <Box sx={{ marginTop: '8px' }}>
-          <LinearProgressBar value={ProjectCard.progress.prog} />
+          <LinearProgressBar value={ProjectCard.progress.prog} bgColor="grey" />
           <Box sx={{ marginTop: '8px', display: 'flex', justifyContent: 'space-between' }}>
             <Label text={{ value: ProjectCard.progress.text, size: 18, color: 'grey', weight: 100 }} />
             <Label text={{ value: ProjectCard.progress.value, size: 18, color: 'grey', weight: 100 }} />
