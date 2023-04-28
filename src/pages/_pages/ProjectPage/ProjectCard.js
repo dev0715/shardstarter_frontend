@@ -93,7 +93,6 @@ const Projectcard = () => {
             hasFocus={true}
             onClick={() => setWalletConnected(!walletConnected)}
           />
-          {console.log(walletConnected)}
         </Box>
         <Label
           sx={{ marginTop: '8px', textAlign: 'right' }}
