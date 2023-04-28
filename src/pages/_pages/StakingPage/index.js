@@ -1,9 +1,12 @@
 import React from 'react';
+import MainStaking from "./MainStaking"
+import PriceStaking from "./PriceStaking"
 
 const StakingPage = () => {
   return(
     <div>
-      StakingPage
+      <MainStaking />
+      <PriceStaking />
     </div>
   )
 }
