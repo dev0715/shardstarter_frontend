@@ -89,3 +89,4 @@ export default function Label({ color = 'default', variant = 'ghost', children, 
     </RootStyle>
   );
 }
+
