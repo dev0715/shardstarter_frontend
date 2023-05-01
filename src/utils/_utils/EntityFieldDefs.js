@@ -337,3 +337,134 @@ export const stakingElement = {
     }
   ]
 };
+
+export const LiquidParams = {
+  labels: [
+    {
+      label: {
+        value: 'You will receive',
+        weight: 100
+      },
+      value: {
+        value: '100 xSHM',
+        color: 'grey',
+        weight: 100
+      }
+    },
+    {
+      label: {
+        value: 'Exchange Rate',
+        weight: 100
+      },
+      value: {
+        value: '1 SHM = 1 xSHM',
+        color: 'grey',
+        weight: 100
+      }
+    },
+    {
+      label: {
+        value: 'Transaction Cost',
+        weight: 100
+      },
+      value: {
+        value: '- $10.12',
+        color: 'grey',
+        weight: 100
+      }
+    },
+    {
+      label: {
+        value: 'Reward Fee',
+        weight: 100,
+        img: '_img/icon/info.png'
+      },
+      value: {
+        value: '10%',
+        color: 'grey',
+        weight: 100
+      }
+    }
+  ],
+  items: [
+    {
+      label: {
+        value: 'Staked',
+        size: 18,
+        color: '#26323E'
+      },
+      value: {
+        value: '120 SHM',
+        size: 40
+      }
+    },
+    {
+      label: {
+        value: 'Received',
+        size: 18,
+        color: '#26323E'
+      },
+      value: {
+        value: '120 xSHM',
+        size: 40
+      }
+    },
+    {
+      label: {
+        value: 'Rewards',
+        size: 18,
+        color: '#26323E'
+      },
+      value: {
+        value: '12 SHM',
+        size: 40
+      }
+    }
+  ],
+  values: [
+    {
+      label: {
+        value: 'Annual Percentage Rate',
+        weight: 100
+      },
+      value: {
+        value: '4.5%',
+        color: 'grey',
+        weight: 100
+      }
+    },
+    {
+      label: {
+        value: 'Total Staked',
+        weight: 100
+      },
+      value: {
+        value: '$1,200,000.00',
+        color: 'grey',
+        weight: 100
+      }
+    },
+    {
+      label: {
+        value: 'Total Stakers',
+        weight: 100
+      },
+      value: {
+        value: '1,600',
+        color: 'grey',
+        weight: 100
+      }
+    },
+    {
+      label: {
+        value: 'xSHM Marketcap',
+        weight: 100
+      },
+      value: {
+        value: '$120,049,054.45',
+        color: 'grey',
+        weight: 100
+      }
+    }
+  ]
+};

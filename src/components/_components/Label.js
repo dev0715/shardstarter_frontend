@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 
 export const Label = (props) => {
-  const { value, size = 20, color = 'white', type = 'text', href, weight = 700, underlined = false } = props.text;
+  const { value, size = 20, color = 'white', type = 'text', href, weight = 700, underlined = false, img } = props.text;
 
   const textColor =
     color === 'grey'
@@ -17,7 +17,21 @@ export const Label = (props) => {
       : color;
 
   if (type === 'text') {
-    return <Typography sx={{ ...props.sx, fontSize: size, fontWeight: weight, color: textColor }}>{value}</Typography>;
+    return (
+      <Typography
+        sx={{
+          ...props.sx,
+          fontSize: size,
+          fontWeight: weight,
+          color: textColor,
+          display: 'flex',
+          alignItems: 'center'
+        }}
+      >
+        {value}
+        {img && <img src={img} alt="img" width={21} height={21} style={{ marginLeft: '14px' }} />}
+      </Typography>
+    );
   }
   if (type === 'link') {
     return (
@@ -72,14 +86,14 @@ export const Span = (props) => {
   }
 };
 
-export function RoundedLabel({ keyword, value, bgColor, width, height }) {
+export function RoundedLabel({ keyword, value, bgColor }) {
   return (
     <div
       style={{
         display: 'flex',
         backgroundColor: bgColor,
         borderRadius: '8px',
-        padding: '5px 16px 8px 16px',
+        padding: '5px 16px 8px 16px'
       }}
     >
       <Label text={{ value: keyword + ':', weight: 100 }} />
