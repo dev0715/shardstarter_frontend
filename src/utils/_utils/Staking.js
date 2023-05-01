@@ -1,6 +1,6 @@
 
 export const Staking = {
-  icon: '_img/icon/solchicks.png',
+  icon: '_img/icon/solchicks_2.png',
   iconUrl: 'solchicks',
   label: {
     value: 'The Topaz',
@@ -22,7 +22,8 @@ export const Staking = {
       value: {
         value: 'Staked $SHMX',
         size: 18,
-        weight: 100
+        weight: 100,
+        color: 'grey'
       }
     },
     {
@@ -34,7 +35,8 @@ export const Staking = {
       value: {
         value: '50% of Pool Size',
         size: 18,
-        weight: 100
+        weight: 100,
+        color: 'grey'
       }
     },
     {
@@ -46,7 +48,8 @@ export const Staking = {
       value: {
         value: 'Stake for 10 Days',
         size: 18,
-        weight: 100
+        weight: 100,
+        color: 'grey'
       }
     }
   ]

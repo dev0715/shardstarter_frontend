@@ -1,4 +1,4 @@
-export const navItems = ['projects', 'staking', 'dao', 'account', 'docs'];
+export const navItems = ['projects', 'staking', 'vote', 'account', 'docs'];
 
 export const loremString =
   "Lorem Ipsum is simply dummy text of the printing and texttg typesetting industry. Lorem Ipsum has been the acceptts industry's standard dummy text.";

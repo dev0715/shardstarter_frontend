@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import { Label } from 'components/_components/Label';
-import { SearchInput } from 'components/_components/Input';
+import { SearchInput, SubmitInput } from 'components/_components/Input';
 import { PrimaryButton } from 'components/_components/Button';
 import { RoundedCard } from 'components/_components/Card';
 import Pagination from 'components/_components/Pagination';
@@ -11,9 +11,7 @@ import { StakingButtons, stakingElement } from 'utils/_utils/EntityFieldDefs';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 
-const RenderElements = (element, idx) => {
-  const [expanded, setExpanded] = useState(false);
-
+const RenderElements = (element, idx, expanded, setExpanded) => {
   return (
     <Box
       key={idx}
@@ -124,30 +122,95 @@ const RenderElements = (element, idx) => {
               right: '30px',
               top: '30px'
             }}
-            onClick={() => setExpanded(!expanded)}
+            onClick={() =>
+              setExpanded(
+                expanded.map((value, index) => {
+                  if (index === idx) {
+                    return !value;
+                  }
+                  return value;
+                })
+              )
+            }
           >
-            {!expanded && <ExpandMoreIcon sx={{ color: 'white' }} />}
-            {expanded && <ExpandLessIcon sx={{ color: 'white' }} />}
+            {!expanded[idx] && <ExpandMoreIcon sx={{ color: 'white' }} />}
+            {expanded[idx] && <ExpandLessIcon sx={{ color: 'white' }} />}
           </Button>
         </Box>
       </Box>
-      {expanded && (
+      {expanded[idx] && (
         <Box
           sx={{
             margin: '35px -30px 0px -60px',
             paddingTop: '50px',
-            borderTop: '1px solid #002B15',
-            height: '170px'
+            borderTop: '1px solid #002B15'
           }}
-        ></Box>
+        >
+          <Box
+            sx={{
+              display: 'flex',
+              columnGap: '35px',
+              rowGap: '25px',
+              padding: '0px 30px',
+              justifyContent: 'space-between',
+              flexWrap: 'wrap'
+            }}
+          >
+            <SubmitInput
+              sx={{
+                width: '30%',
+                minWidth: '400px',
+                '@media (max-width: 1000px)': {
+                  width: '100%',
+                  minWidth: 'fit-content'
+                }
+              }}
+              value="600.55"
+              size={38}
+              btnValue="Harvest"
+            />
+            <SubmitInput
+              sx={{
+                width: '30%',
+                minWidth: '400px',
+                '@media (max-width: 1000px)': {
+                  width: '100%',
+                  minWidth: 'fit-content'
+                }
+              }}
+              value="1,200.00"
+              size={26}
+              btnValue="Stake"
+            />
+            <SubmitInput
+              sx={{
+                width: '30%',
+                minWidth: '400px',
+                '@media (max-width: 1000px)': {
+                  width: '100%',
+                  minWidth: 'fit-content'
+                }
+              }}
+              value="1,200.00"
+              size={26}
+              btnValue="Un Stake"
+            />
+          </Box>
+        </Box>
       )}
     </Box>
   );
 };
 
+const RenderLiquid = () => {
+  const [error, setError] = useState(false);
+  return <Box>Hello world</Box>;
+};
+
 function PriceStaking() {
   const [activeId, setActiveId] = useState(0);
   const elements = Array(5).fill(stakingElement);
+  const [expanded, setExpanded] = useState(Array(5).fill(false));
 
   return (
     <Box
@@ -211,9 +274,12 @@ function PriceStaking() {
           </Stack>
         </Box>
         <Box sx={{ marginTop: '60px' }}>
-          <Box sx={{ display: 'flex', rowGap: '20px', flexDirection: 'column' }}>
-            {elements.map((element, idx) => RenderElements(element, idx))}
-          </Box>
+          {(activeId === 0 || activeId === 1) && (
+            <Box sx={{ display: 'flex', rowGap: '20px', flexDirection: 'column' }}>
+              {elements.map((element, idx) => RenderElements(element, idx, expanded, setExpanded))}
+            </Box>
+          )}
+          {RenderLiquid()}
         </Box>
       </Box>
     </Box>
