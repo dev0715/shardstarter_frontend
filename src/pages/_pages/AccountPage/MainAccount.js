@@ -29,22 +29,22 @@ function MainAccount() {
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <RoundedLabel keyword={AccountInfo.balance.keyword} value={AccountInfo.balance.value} bgColor="#171717" />
-            <RoundedLabel keyword={AccountInfo.buy.keyworkd} value={AccountInfo.buy.value} bgColor="#171717" />
+            <RoundedLabel keyword={AccountInfo.buy.keyword} value={AccountInfo.buy.value} bgColor="#171717" />
           </div>
           <RoundedLabel keyword={AccountInfo.wallet.keyword} value={AccountInfo.wallet.value} bgColor="#171717" />
           <div
             style={{
               width: '770px',
-              height: '221px',
+              height: '251px',
               border: '1px solid #02FF7B',
               borderRadius: '8px',
               backgroundColor: '#171717',
               margin: '10px',
-              padding: '30px 20px'
+              padding: '30px 28px'
             }}
           >
             {AccountInfo.accountBox.map((element, index) => (
-              <div key={index}>
+              <div key={index} style={{marginBottom: '30px'}}>
                 {/* Added Part Start */}
                 <div
                   style={{
