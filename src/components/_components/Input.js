@@ -1,4 +1,5 @@
 import React from 'react';
+import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
 import SearchIcon from '@mui/icons-material/Search';
@@ -24,4 +25,11 @@ export const SearchInput = (props) => {
       }}
     />
   );
+};
+
+export const SubmitInput = () => {
+  return <Box>
+    <input value="120, 000" style={{display: 'flex', position: 'absolute'}}/>
+    <button style={{position: 'relative'}} />
+  </Box>;
 };

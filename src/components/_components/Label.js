@@ -71,11 +71,20 @@ export const Span = (props) => {
     );
   }
 };
-export function RoundedLabel({ keyword, value, bgColor, width, height}) {
-  return  (
-    <div style={{display: "flex", backgroundColor: bgColor, width :width, height : height, borderRadius:"8px", padding:"5px 16px 8px", margin:"10px"}}>
-      <Label text={{value: keyword+':'}} />
-      <Label sx={{marginLeft:"10px"}} text={{ value: value, color : "green"}} />
+
+export function RoundedLabel({ keyword, value, bgColor, width, height }) {
+  return (
+    <div
+      style={{
+        display: 'flex',
+        backgroundColor: bgColor,
+        borderRadius: '8px',
+        padding: '5px 16px 8px 16px',
+        margin: '10px'
+      }}
+    >
+      <Label text={{ value: keyword + ':', weight: 100 }} />
+      <Label sx={{ marginLeft: '10px' }} text={{ value: value, color: 'green', weight: 100 }} />
     </div>
-  )
+  );
 }

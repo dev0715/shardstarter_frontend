@@ -28,28 +28,10 @@ function MainAccount() {
         <LeftStaking />
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-            <RoundedLabel
-              keyword={AccountInfo.balance.keyword}
-              value={AccountInfo.balance.value}
-              bgColor="#171717"
-              width="350px"
-              height="40px"
-            />
-            <RoundedLabel
-              keyword={AccountInfo.buy.keyworkd}
-              value={AccountInfo.buy.value}
-              bgColor="#171717"
-              width="160px"
-              height="40px"
-            />
+            <RoundedLabel keyword={AccountInfo.balance.keyword} value={AccountInfo.balance.value} bgColor="#171717" />
+            <RoundedLabel keyword={AccountInfo.buy.keyworkd} value={AccountInfo.buy.value} bgColor="#171717" />
           </div>
-          <RoundedLabel
-            keyword={AccountInfo.wallet.keyword}
-            value={AccountInfo.wallet.value}
-            bgColor="#171717"
-            width="770px"
-            height="40px"
-          />
+          <RoundedLabel keyword={AccountInfo.wallet.keyword} value={AccountInfo.wallet.value} bgColor="#171717" />
           <div
             style={{
               width: '770px',
@@ -94,7 +76,7 @@ function MainAccount() {
           {/* Total View */}
           <div style={{ display: 'flex', padding: '10px' }}>
             {AccountInfo.totalView.map((element, index) => (
-              <div key={index} style={{marginRight: '60px'}}>
+              <div key={index} style={{ marginRight: '60px' }}>
                 <Label
                   text={{
                     value: element.keyword,
