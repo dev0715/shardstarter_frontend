@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box } from '@mui/material';
 import { RoundedLabel, Label } from 'components/_components/Label';
-
+import { AccountInfo } from '../../../utils/_utils/EntityFieldDefs';
 import LeftStaking from '../StakingPage/LeftStaking';
 
 function MainAccount() {
@@ -28,12 +28,24 @@ function MainAccount() {
         <LeftStaking />
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-            <RoundedLabel keyword="Balance" value="$SHMX 120,000.00" bgColor="#171717" width="350px" height="40px" />
-            <RoundedLabel keyword="BUY" value="$SHMX" bgColor="#171717" width="160px" height="40px" />
+            <RoundedLabel
+              keyword={AccountInfo.balance.keyword}
+              value={AccountInfo.balance.value}
+              bgColor="#171717"
+              width="350px"
+              height="40px"
+            />
+            <RoundedLabel
+              keyword={AccountInfo.buy.keyworkd}
+              value={AccountInfo.buy.value}
+              bgColor="#171717"
+              width="160px"
+              height="40px"
+            />
           </div>
           <RoundedLabel
-            keyword="Wallet"
-            value="90fsfdggfhgslrheug556gfddhsfhg78uguipggui78ugb"
+            keyword={AccountInfo.wallet.keyword}
+            value={AccountInfo.wallet.value}
             bgColor="#171717"
             width="770px"
             height="40px"
@@ -49,86 +61,57 @@ function MainAccount() {
               padding: '30px 20px'
             }}
           >
-            <div>
-              <div
-                style={{
-                  width: '188px',
-                  height: '37px',
-                  backgroundColor: '#4B4B4B',
-                  color: '#02FF7B',
-                  fontSize: '17px',
-                  padding: '5px 15px',
+            {AccountInfo.accountBox.map((element, index) => (
+              <div key={index}>
+                {/* Added Part Start */}
+                <div
+                  style={{
+                    width: '188px',
+                    height: '37px',
+                    backgroundColor: '#4B4B4B',
+                    color: '#02FF7B',
+                    fontSize: '17px',
+                    padding: '5px 15px',
 
-                  borderRadius: '7px'
-                }}
-              >
-                NON EVM WALLET
-              </div>
-              <div style={{ display: 'flex', flexDirection: 'row' }}>
-                <Label
-                  text={{
-                    value: '7Jhdggfuid7fdhbfgofuoirsdn56fdgs',
-                    size: 26
+                    borderRadius: '7px'
                   }}
-                />
-                <span style={{ width: '26px', height: '26px', margin: '8px' }}>
-                  <img src="_img/icon/pencil.png" />
-                </span>
+                >
+                  {element.keyword}
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'row' }}>
+                  <Label
+                    text={{
+                      value: element.value,
+                      size: 26
+                    }}
+                  />
+                  <img src="_img/icon/pencil.png" width="26px" style={{ margin: '8px' }} />
+                </div>
+                {/* Added Part End */}
               </div>
-
-              <div
-                style={{
-                  width: '188px',
-                  height: '37px',
-                  backgroundColor: '#4B4B4B',
-                  color: '#02FF7B',
-                  fontSize: '17px',
-                  padding: '5px 15px',
-                  marginTop: '10px',
-                  borderRadius: '7px'
-                }}
-              >
-                Eamil Address
-              </div>
-              <div style={{ display: 'flex', flexDirection: 'row' }}>
-                <Label
-                  text={{
-                    value: '7Jhdggfuid7fdhbfgofuoirsdn56fdgs',
-                    size: 26
-                  }}
-                />
-                <span style={{ width: '26px', height: '26px', margin: '8px' }}>
-                  <img src="_img/icon/pencil.png" />
-                </span>
-              </div>
-            </div>
+            ))}
           </div>
-          <div style={{display: 'flex', padding:'10px'}}>
-              <div>
-                <Label text={{
-                    value: 'Staked $SHMX',
+          {/* Total View */}
+          <div style={{ display: 'flex', padding: '10px' }}>
+            {AccountInfo.totalView.map((element, index) => (
+              <div key={index} style={{marginRight: '60px'}}>
+                <Label
+                  text={{
+                    value: element.keyword,
                     size: 20,
                     weight: 100,
                     color: 'green'
-                  }}/>
-                  <Label text={{
-                    value: '$12000.00',
+                  }}
+                />
+                <Label
+                  text={{
+                    value: element.value,
                     size: 40
-                  }}/>
+                  }}
+                />
               </div>
-              <div style={{marginLeft: '60px'}}>
-                <Label text={{
-                    value: 'Unclaimed Tokens',
-                    size: 20,
-                    weight: 100,
-                    color: 'green'
-                  }}/>
-                  <Label text={{
-                    value: '1,239,000.00',
-                    size: 40
-                  }}/>
-              </div>
-            </div>
+            ))}
+          </div>
         </div>
       </Box>
     </div>
