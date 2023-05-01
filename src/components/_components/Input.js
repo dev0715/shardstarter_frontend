@@ -13,7 +13,14 @@ export const SearchInput = (props) => {
             <SearchIcon />
           </InputAdornment>
         ),
-        style: { fontWeight: 100, backgroundColor: '#171717', maxWidth: '400px', height: '70px', fontSize: '20px' }
+        style: {
+          fontWeight: 100,
+          backgroundColor: '#171717',
+          maxWidth: '400px',
+          height: '70px',
+          fontSize: '20px',
+          border: '1px solid #02FF7B'
+        }
       }}
     />
   );

@@ -1,7 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import { Staking } from 'utils/_utils/Staking';
 import { Label } from 'components/_components/Label';
+import { Staking } from 'utils/_utils/Staking';
 
 const renderDetails = () => (
   <Box sx={{ display: 'flex', rowGap: '15px', flexDirection: 'column' }}>
@@ -19,8 +19,15 @@ const renderDetails = () => (
 
 function LeftStaking() {
   return (
-    <div style = {{display: 'flex', flexDirection:'column'}}>
-      <Box sx={{ display: 'flex' }}>
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <Box
+        sx={{
+          display: 'flex',
+          '@media(max-width: 500px)': {
+            flexDirection: 'column'
+          }
+        }}
+      >
         <img src={Staking.icon} alt={Staking.iconUrl} width={120} height={120} />
         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
           <Label sx={{ marginLeft: '15px', minWidth: '75px' }} text={Staking.label} />

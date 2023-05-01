@@ -137,6 +137,7 @@ export const NetVRK = {
 };
 export const ProjectButtons = ['All', 'Upcoming', 'Active', 'Completed'];
 export const VoteButtons = ['All', 'Open', 'Completed'];
+export const StakingButtons = ['Staking', 'Farming', 'Liquid Staking'];
 export const VoteProjects = [
   {
     imgUrl: '_img/icon/solchicks_1.png',
@@ -227,6 +228,7 @@ export const VoteProjects = [
     ]
   }
 ];
+
 export const AccountInfo = {
   balance: {
     keyword: 'Balance',
@@ -258,6 +260,80 @@ export const AccountInfo = {
     {
       keyword: 'Unclaimed Tokens',
       value: '1,239,000.00'
+    }
+  ]
+};
+
+export const stakingElement = {
+  imgUrl: '_img/icon/coins.png',
+  value: {
+    value: '$SHMX Staking',
+    size: 30
+  },
+  label: {
+    bgColor: '#171717',
+    label: '$SHMX / SHMX',
+    color: 'green',
+    size: 20,
+    width: 197,
+    height: 43
+  },
+  items: [
+    {
+      label: {
+        value: 'SHMX Staked',
+        color: 'grey',
+        size: 22,
+        height: 100
+      },
+      value: {
+        value: '1,200.00',
+        size: 26,
+        height: 100
+      }
+    },
+    {
+      label: {
+        value: 'Total Staked',
+        color: 'grey',
+        size: 22,
+        height: 100
+      },
+      value: {
+        value: '125,000.00',
+        size: 26,
+        height: 100
+      }
+    },
+    {
+      label: {
+        value: 'APR',
+        color: 'grey',
+        size: 22,
+        height: 100
+      },
+      value: {
+        value: '12%',
+        size: 26,
+        height: 100
+      },
+      img: {
+        imgUrl: '_img/icon/increased.png',
+        size: 16
+      }
+    },
+    {
+      label: {
+        value: 'TVL',
+        color: 'grey',
+        size: 22,
+        height: 100
+      },
+      value: {
+        value: '125,000.00',
+        size: 26,
+        height: 100
+      }
     }
   ]
 };
