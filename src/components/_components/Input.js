@@ -5,6 +5,10 @@ import InputAdornment from '@mui/material/InputAdornment';
 import SearchIcon from '@mui/icons-material/Search';
 import { PrimaryButton } from 'components/_components/Button';
 import { Label } from './Label';
+import Paper from '@mui/material/Paper';
+import InputBase from '@mui/material/InputBase';
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
 
 export const SearchInput = (props) => {
   return (
@@ -26,6 +30,48 @@ export const SearchInput = (props) => {
         }
       }}
     />
+  );
+};
+
+export const Search = ({ value }) => {
+  const [inputValue, setInputValue] = useState(value);
+
+  return (
+    <Paper
+      component="form"
+      sx={{
+        p: '2px 13px',
+        display: 'flex',
+        alignItems: 'center',
+        marginTop: '50px',
+        marginBottom: '10px',
+        border: '1px solid #02FF7B',
+        backgroundColor: '#171717',
+        height: '96px'
+      }}
+    >
+      <IconButton sx={{ p: '10px' }} disabled>
+        <img src="_img/icon/shardeum_1.png" alt="hello" width={50} />
+      </IconButton>
+      <InputBase
+        sx={{ ml: 1, flex: 1, fontSize: '26px', fontWeight: 700 }}
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
+      />
+      <Button
+        sx={{
+          width: '140px',
+          height: '70px',
+          backgroundColor: '#000000',
+          borderRadius: '8px',
+          border: '1px solid #7070704D',
+          color: 'white',
+          fontSize: 20
+        }}
+      >
+        MAX
+      </Button>
+    </Paper>
   );
 };
 
