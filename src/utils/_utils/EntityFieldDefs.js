@@ -227,3 +227,37 @@ export const VoteProjects = [
     ]
   }
 ];
+export const AccountInfo = {
+  balance: {
+    keyword: 'Balance',
+    value: '$SHMX 120,000.00'
+  },
+  buy: {
+    keyword: 'Buy',
+    value: '$SHMX'
+  },
+  wallet: {
+    keyword: 'Wallet',
+    value: '90fsfdggfhgslrheug556gfddhsfhg78uguipggui78ugb'
+  },
+  accountBox: [
+    {
+      keyword: 'NON EVM WALLET',
+      value: '7Jhdggfuid7fdhbfgofuoirsdn56fdgs'
+    },
+    {
+      keyword: 'EMAIL ADDRESS',
+      value: '7Jhdggfuid7fdhbfgofuoirsdn56fdgs'
+    }
+  ],
+  totalView: [
+    {
+      keyword: 'Staked $SHMX',
+      value: '$12000.00'
+    },
+    {
+      keyword: 'Unclaimed Tokens',
+      value: '1,239,000.00'
+    }
+  ]
+};
