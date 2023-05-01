@@ -25,7 +25,6 @@ function MainStaking() {
           backgroundSize: 'cover',
           borderRadius: '38px',
           display: 'flex',
-          justifyContent: 'space-between'
         }}
       >
         <LeftStaking />

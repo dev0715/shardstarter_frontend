@@ -80,7 +80,6 @@ export function RoundedLabel({ keyword, value, bgColor, width, height }) {
         backgroundColor: bgColor,
         borderRadius: '8px',
         padding: '5px 16px 8px 16px',
-        margin: '10px'
       }}
     >
       <Label text={{ value: keyword + ':', weight: 100 }} />
