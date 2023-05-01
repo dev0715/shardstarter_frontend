@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Box from '@mui/material/Box';
+import { RoundedLabel } from 'components/_components/Label';
 
 function RightStaking() {
   return (
-    <div></div>
-  )
+    <Box sx={{ padding: '50px 70px 60px 70px' }}>
+      <RoundedLabel keyword="Balance" value="$SHMX 120,000.00" bgColor="#171717" />
+    </Box>
+  );
 }
 
-export default RightStaking
+export default RightStaking;

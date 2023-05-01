@@ -19,7 +19,7 @@ const renderDetails = () => (
 
 function LeftStaking() {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', padding: '60px 0px 60px 65px' }}>
       <Box
         sx={{
           display: 'flex',
