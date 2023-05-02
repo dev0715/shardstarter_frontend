@@ -11,7 +11,8 @@ function MainAccount() {
         sx={{
           '@media (max-width: 1500px)': {
             width: '100%',
-            marginLeft: '0px'
+            marginLeft: '0px',
+            flexDirection: 'column'
           },
           backgroundImage: 'url("_img/staking/background.png")',
           backgroundRepeat: 'no-repeat',
@@ -21,30 +22,41 @@ function MainAccount() {
           padding: '60px 65px',
           marginLeft: '150px',
           marginRight: '150px',
+          marginTop: '70px',
           display: 'flex',
           justifyContent: 'space-between'
         }}
       >
         <LeftStaking />
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <Box
+          sx={{
+            '@media (max-width: 1500px': {
+              width: '100%'
+            },
+            display: 'flex',
+            flexDirection: 'column',
+            width: '770px',
+            marginRight: '70px'
+          }}
+        >
+          <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '12px' }}>
             <RoundedLabel keyword={AccountInfo.balance.keyword} value={AccountInfo.balance.value} bgColor="#171717" />
             <RoundedLabel keyword={AccountInfo.buy.keyword} value={AccountInfo.buy.value} bgColor="#171717" />
           </div>
           <RoundedLabel keyword={AccountInfo.wallet.keyword} value={AccountInfo.wallet.value} bgColor="#171717" />
           <div
             style={{
-              width: '770px',
+              width: '100%',
               height: '251px',
               border: '1px solid #02FF7B',
               borderRadius: '8px',
               backgroundColor: '#171717',
-              margin: '10px',
-              padding: '30px 28px'
+              padding: '30px 28px',
+              marginTop: '12px'
             }}
           >
             {AccountInfo.accountBox.map((element, index) => (
-              <div key={index} style={{marginBottom: '30px'}}>
+              <div key={index} style={{ marginBottom: '30px' }}>
                 {/* Added Part Start */}
                 <div
                   style={{
@@ -94,7 +106,7 @@ function MainAccount() {
               </div>
             ))}
           </div>
-        </div>
+        </Box>
       </Box>
     </div>
   );
