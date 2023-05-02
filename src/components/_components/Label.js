@@ -35,7 +35,7 @@ export const Label = (props) => {
   }
   if (type === 'link') {
     return (
-      <Link to={href}>
+      <Link to={href} onClick={props.onClick}>
         <Typography
           sx={{
             ...props.sx,
@@ -93,7 +93,8 @@ export function RoundedLabel({ keyword, value, bgColor }) {
         display: 'flex',
         backgroundColor: bgColor,
         borderRadius: '8px',
-        padding: '5px 16px 8px 16px'
+        padding: '5px 16px 8px 16px',
+        overflow: 'hidden'
       }}
     >
       <Label text={{ value: keyword + ':', weight: 100 }} />

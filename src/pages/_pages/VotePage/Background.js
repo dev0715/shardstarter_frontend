@@ -37,8 +37,22 @@ const Background = () => {
         >
           <Box sx={{ paddingTop: '62px' }}>
             <Box>
-              <Label text={{ value: 'Vote For Projects', size: 60 }} />
-              <Label text={{ value: 'Shardstarter', color: 'green', size: 60 }} />
+              <Label
+                sx={{
+                  '@media (max-width: 600px)': {
+                    fontSize: '45px'
+                  }
+                }}
+                text={{ value: 'Vote For Projects', size: 60 }}
+              />
+              <Label
+                sx={{
+                  '@media (max-width: 600px)': {
+                    fontSize: '45px'
+                  }
+                }}
+                text={{ value: 'Shardstarter', color: 'green', size: 60 }}
+              />
             </Box>
             <Box
               sx={{

@@ -6,6 +6,7 @@ import { SearchInput } from 'components/_components/Input';
 import { PrimaryButton } from 'components/_components/Button';
 import { ProjectCard } from 'components/_components/Card';
 import Pagination from 'components/_components/Pagination';
+import FilterBar from 'components/_components/FilterBar';
 import { ProjectButtons, Fantasy, Solchicks, NetVRK, Bulkperks, Sidus } from 'utils/_utils/EntityFieldDefs';
 
 const Projects = () => {
@@ -85,17 +86,40 @@ const Projects = () => {
           <SearchInput placeholder="Search" />
         </Box>
         <Box sx={{ marginTop: '55px' }}>
-          <Stack maxWidth="725px" direction="row" flexWrap="wrap" justifyContent="space-between" rowGap="20px">
-            {ProjectButtons.map((but, idx) => (
-              <PrimaryButton
-                key={idx}
-                label={but}
-                sx={{ padding: '20px 43px 20px 43px', color: '#585858' }}
-                onClick={() => setActiveId(idx)}
-                hasFocus={activeId === idx}
-              />
-            ))}
-          </Stack>
+          <Box
+            sx={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              '@media (max-width: 1200px)': {
+                flexDirection: 'column',
+                rowGap: '20px'
+              }
+            }}
+          >
+            <Stack
+              width="725px"
+              direction="row"
+              flexWrap="wrap"
+              justifyContent="space-between"
+              rowGap="20px"
+              sx={{
+                '@media (max-width: 1200px)': {
+                  width: '100%'
+                }
+              }}
+            >
+              {ProjectButtons.map((but, idx) => (
+                <PrimaryButton
+                  key={idx}
+                  label={but}
+                  sx={{ padding: '20px 43px 20px 43px', color: '#585858' }}
+                  onClick={() => setActiveId(idx)}
+                  hasFocus={activeId === idx}
+                />
+              ))}
+            </Stack>
+            <FilterBar options={['PolkaFantasy', 'NetVRK', 'Bulkperks', 'Solchicks', 'SIDUS']} />
+          </Box>
         </Box>
         <Box
           sx={{

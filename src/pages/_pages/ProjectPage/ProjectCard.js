@@ -32,10 +32,11 @@ const Projectcard = () => {
       sx={{
         '@media (max-width: 1500px)': {
           width: '100%',
-          marginLeft: '0px'
+          marginLeft: '0px',
+          height: 'auto'
         },
         width: '620px',
-        minHeight: '810px',
+        height: '850px',
         backgroundImage: 'url("_img/cards/detail_bg.png")',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
@@ -80,7 +81,7 @@ const Projectcard = () => {
         >
           {walletConnected && (
             <Label
-              sx={{ marginBottom: '15px' }}
+              sx={{ marginBottom: '15px', textAlign: 'center' }}
               text={{ value: 'This IDO requires KYC verification.', size: 18, weight: 100 }}
             />
           )}

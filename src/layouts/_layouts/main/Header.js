@@ -7,7 +7,7 @@ import { navItems } from 'utils/_utils/EntityFieldDefs';
 import { Label } from 'components/_components/Label';
 
 const Logo = () => (
-  <Box minWidth={318} height={64}>
+  <Box maxWidth={318} height={64}>
     <Link to="/home">
       <img src="_img/logo.png" alt="Logo" height="64px" />
     </Link>
@@ -44,6 +44,7 @@ const Header = (props) => {
                 size: 18,
                 weight: 100
               }}
+              onClick={handleDrawerToggle}
             />
             <Divider />
           </Box>

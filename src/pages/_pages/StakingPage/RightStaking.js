@@ -22,7 +22,15 @@ function RightStaking() {
       <SubmitInput value="1,200.00" size={26} btnValue="Un Stake" sx={{ marginTop: '60px' }} />
       <Box sx={{ marginTop: '40px' }}>
         <Label text={{ value: '$SHMX', color: 'green', weight: 100 }} />
-        <Box sx={{ display: 'flex' }}>
+        <Box
+          sx={{
+            display: 'flex',
+            '@media (max-width: 500px)': {
+              flexDirection: 'column',
+              rowGap: '25px'
+            }
+          }}
+        >
           <Label sx={{ marginTop: '10px', marginRight: '40px' }} text={{ size: 40, value: '600.55' }} />
           <PrimaryButton label="Harvest" hasFocus={true} sx={{ width: '200px' }} />
         </Box>

@@ -468,3 +468,230 @@ export const LiquidParams = {
     }
   ]
 };
+
+export const AccountProjects = [
+  {
+    project: {
+      img: '_img/icon/solchicks_1.png',
+      text: {
+        value: 'Galaxy Wars',
+        size: 30
+      },
+      value: {
+        value: '$GLXW',
+        color: 'green',
+        weight: 100
+      },
+      labels: [
+        {
+          width: 120,
+          height: 30,
+          bgColor: '#171717',
+          label: 'Private Deal',
+          color: '#02FF7B',
+          size: 14
+        },
+        {
+          width: 120,
+          height: 30,
+          bgColor: '#171717',
+          label: 'Shardeum',
+          color: '#02FF7B',
+          size: 14
+        }
+      ]
+    },
+    purchased: {
+      label: {
+        value: '1,230,000.00',
+        size: 22
+      },
+      value: {
+        value: '12 MAR 2023',
+        color: 'grey',
+        size: 16,
+        weight: 100
+      }
+    },
+    claimed: {
+      label: {
+        value: '230,000.00',
+        size: 22
+      }
+    },
+    unclaimed: {
+      label: {
+        value: '100,000.00',
+        size: 22
+      }
+    }
+  },
+  {
+    project: {
+      img: '_img/icon/netvrk_1.png',
+      text: {
+        value: 'Galaxy Wars',
+        size: 30
+      },
+      value: {
+        value: '$GLXW',
+        color: 'green',
+        weight: 100
+      },
+      labels: [
+        {
+          width: 120,
+          height: 30,
+          bgColor: '#171717',
+          label: 'Private Deal',
+          color: '#02FF7B',
+          size: 14
+        },
+        {
+          width: 120,
+          height: 30,
+          bgColor: '#171717',
+          label: 'Shardeum',
+          color: '#02FF7B',
+          size: 14
+        }
+      ]
+    },
+    purchased: {
+      label: {
+        value: '1,230,000.00',
+        size: 22
+      },
+      value: {
+        value: '12 MAR 2023',
+        color: 'grey',
+        size: 16,
+        weight: 100
+      }
+    },
+    claimed: {
+      label: {
+        value: '230,000.00',
+        size: 22
+      }
+    },
+    unclaimed: {
+      label: {
+        value: '100,000.00',
+        size: 22
+      }
+    }
+  },
+  {
+    project: {
+      img: '_img/icon/sidus_1.png',
+      text: {
+        value: 'Galaxy Wars',
+        size: 30
+      },
+      value: {
+        value: '$GLXW',
+        color: 'green',
+        weight: 100
+      },
+      labels: [
+        {
+          width: 120,
+          height: 30,
+          bgColor: '#171717',
+          label: 'Private Deal',
+          color: '#02FF7B',
+          size: 14
+        },
+        {
+          width: 120,
+          height: 30,
+          bgColor: '#171717',
+          label: 'Shardeum',
+          color: '#02FF7B',
+          size: 14
+        }
+      ]
+    },
+    purchased: {
+      label: {
+        value: '1,230,000.00',
+        size: 22
+      },
+      value: {
+        value: '12 MAR 2023',
+        color: 'grey',
+        size: 16,
+        weight: 100
+      }
+    },
+    claimed: {
+      label: {
+        value: '230,000.00',
+        size: 22
+      }
+    },
+    unclaimed: {
+      label: {
+        value: '100,000.00',
+        size: 22
+      }
+    }
+  },
+  {
+    project: {
+      img: '_img/icon/bulkperks_1.png',
+      text: {
+        value: 'Galaxy Wars',
+        size: 30
+      },
+      value: {
+        value: '$GLXW',
+        color: 'green',
+        weight: 100
+      },
+      labels: [
+        {
+          width: 120,
+          height: 30,
+          bgColor: '#171717',
+          label: 'Private Deal',
+          color: '#02FF7B',
+          size: 14
+        },
+        {
+          width: 120,
+          height: 30,
+          bgColor: '#171717',
+          label: 'Shardeum',
+          color: '#02FF7B',
+          size: 14
+        }
+      ]
+    },
+    purchased: {
+      label: {
+        value: '1,230,000.00',
+        size: 22
+      },
+      value: {
+        value: '12 MAR 2023',
+        color: 'grey',
+        size: 16,
+        weight: 100
+      }
+    },
+    claimed: {
+      label: {
+        value: '230,000.00',
+        size: 22
+      }
+    },
+    unclaimed: {
+      label: {
+        value: '100,000.00',
+        size: 22
+      }
+    }
+  }
+];

@@ -21,6 +21,9 @@ const Pagination = ({ id, setCurId }) => {
         setPrevString('Previous');
         setNextString('Next');
       }
+      if (window.innerWidth < 500) {
+        setCount(1);
+      }
     }
 
     window.addEventListener('resize', handleResize);
